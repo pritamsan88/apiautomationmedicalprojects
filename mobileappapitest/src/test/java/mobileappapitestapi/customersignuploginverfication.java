@@ -30,7 +30,7 @@ public class customersignuploginverfication {
 	{
 		String url="https://dev.mantramedic.com/api/customer/Signup";
 		String contenttype="application/json";
-		String jsonString = "{\"full_name\" : \"Goutam Sanyal\",\"date_of_birth\" : \"1990-06-12\",\"gender\":\"M\",\"email\":\"goutam@gmail.com\",\"phone_no\" : \"8420764240\",\"pin\" : \"6415\"}";
+		String jsonString = "{\"full_name\" : \"Goutam Sanyal\",\"date_of_birth\" : \"1990-06-12\",\"gender\":\"M\",\"email\":\"goutam77@gmail.com\",\"phone_no\" : \"8420764241\",\"pin\" : \"6415\"}";
 
 		
 		Response response=(Response) RestAssured.
@@ -61,7 +61,11 @@ public void customer_signin() {
 			.log().all()
 			.extract().response();
 	Assert.assertEquals(response1.statusCode(), 200,"Response code mismatch");
+	String fullname=response1.jsonPath().get("data.full_name");
+	//System.out.println(fullname);
+	Assert.assertEquals(fullname, "Goutam Sanyal","Name is match");
 }
+
 	
 	
 }
