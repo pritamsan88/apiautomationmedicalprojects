@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="mobileappapitestapi.customersignuploginverfication">
+      <class name="mobileappapitestapi.cutomerfamilymember">
         <methods>
-          <include name="customer_signup"/>
+          <include name="familymember"/>
         </methods>
-      </class> <!-- mobileappapitestapi.customersignuploginverfication -->
+      </class> <!-- mobileappapitestapi.cutomerfamilymember -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
