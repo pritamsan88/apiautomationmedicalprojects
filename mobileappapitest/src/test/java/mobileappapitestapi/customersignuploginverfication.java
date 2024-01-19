@@ -1,6 +1,6 @@
 package mobileappapitestapi;
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
+//import static org.hamcrest.Matchers.*;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -50,7 +50,7 @@ public void customer_signin() {
 	
 	String Url="https://dev.mantramedic.com/api/customer/Login";
 	String contenttype="application/json";
-	String jsonbody="{\"phone_number\" :\"8420764240\",\"pin\":\"6415\"}";
+	String jsonbody="{\"phone_number\" :\"9748049729\",\"pin\":\"1234\"}";
 	Response response1=(Response) RestAssured.
 			given()
 			.contentType(contenttype)
@@ -63,7 +63,7 @@ public void customer_signin() {
 	Assert.assertEquals(response1.statusCode(), 200,"Response code mismatch");
 	String fullname=response1.jsonPath().get("data.full_name");
 	//System.out.println(fullname);
-	Assert.assertEquals(fullname, "Goutam Sanyal","Name is match");
+	Assert.assertEquals(fullname, "Pritam Sanyal","Name is match");
 }
 
 	
