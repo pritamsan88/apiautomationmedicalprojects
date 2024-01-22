@@ -1,9 +1,12 @@
 package mobileappapitestapi;
 
+import java.util.List;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class cutomerfamilymember{
@@ -28,7 +31,14 @@ public class cutomerfamilymember{
 		Assert.assertEquals(response2.getStatusCode(), 200,"Response code mismatch");
 		String messages= response2.jsonPath().get("messages");
 		System.out.println(messages);
-		Assert.assertEquals(messages, "Member list success.","Messages is mismatch");	
+		Assert.assertEquals(messages, "Member list success.","Messages is mismatch");
+		
+		JsonPath familymember=response2.jsonPath();
+		List<String> allfamilymembers=familymember.getList("data.list.full_name");
+		for(String familymembersdetails:allfamilymembers)
+		{
+			System.out.println("Family members:"+familymembersdetails);
+		}
 	}
 	
 	
