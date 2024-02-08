@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-22T18:26:00 IST" name="Default suite" finished-at="2024-01-22T18:26:04 IST" duration-ms="3919">
+  <suite started-at="2024-02-08T13:03:23 IST" name="Default suite" finished-at="2024-02-08T13:03:27 IST" duration-ms="4482">
     <groups>
     </groups>
-    <test started-at="2024-01-22T18:26:00 IST" name="Default test" finished-at="2024-01-22T18:26:04 IST" duration-ms="3919">
-      <class name="mobileappapitestapi.cutomerfamilymember">
-        <test-method signature="familymember()[pri:0, instance:mobileappapitestapi.cutomerfamilymember@4466af20]" started-at="2024-01-22T18:26:00 IST" name="familymember" finished-at="2024-01-22T18:26:04 IST" duration-ms="3854" status="PASS">
+    <test started-at="2024-02-08T13:03:23 IST" name="Default test" finished-at="2024-02-08T13:03:27 IST" duration-ms="4482">
+      <class name="mobileappapitestapi.customerchangepin">
+        <test-method signature="customerforgotpin()[pri:0, instance:mobileappapitestapi.customerchangepin@3e58a80e]" started-at="2024-02-08T13:03:23 IST" name="customerforgotpin" finished-at="2024-02-08T13:03:27 IST" duration-ms="3904" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- familymember -->
-      </class> <!-- mobileappapitestapi.cutomerfamilymember -->
+        </test-method> <!-- customerforgotpin -->
+        <test-method signature="resetpin()[pri:0, instance:mobileappapitestapi.customerchangepin@3e58a80e]" started-at="2024-02-08T13:03:27 IST" name="resetpin" finished-at="2024-02-08T13:03:27 IST" depends-on-methods="mobileappapitestapi.customerchangepin.customerforgotpin" duration-ms="502" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetpin -->
+      </class> <!-- mobileappapitestapi.customerchangepin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
